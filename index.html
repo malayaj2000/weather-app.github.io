@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+    <!-- <div class="spinner-wrapper">
+        <div class="spinner"></div>
+    </div> -->
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+      </div>
     <div class="app-warp">
         <header>
             <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city">
@@ -25,6 +31,12 @@
             </div>
         </main>
     </div>
+    <script>
+        let spinnerWrapper = document.querySelector(".loader-wrapper");
+        window.addEventListener("load", function (){
+                spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+        });
+    </script>
     <script src="main.js"></script>
 </body>
 </html>
